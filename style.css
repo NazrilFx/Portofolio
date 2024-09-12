@@ -1,0 +1,355 @@
+/* GLOBAL */
+
+:root {
+    --dark-bg-color: #001129;
+    --black-bg-color: #000515;
+    --light-bg-color: #B9C6D6;
+}
+
+* {
+    font-family: "Poppins";
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    height: 200vh;
+    overflow-x: hidden;
+}
+
+/* NAV */
+
+nav {
+    position: fixed;
+    z-index: 998;
+    border-radius: 25px;
+    background-color: rgba(185, 198, 214, 0.2); /* Menggunakan rgba untuk membuat latar belakang transparan */
+    backdrop-filter: blur(10px); /* Nilai blur yang lebih rendah */
+    -webkit-backdrop-filter: blur(10px); /* Tambahkan untuk Safari */
+    border: 1px solid rgba(185, 198, 214, 0.2); /* Menambahkan border semi-transparan */
+    color: var(--dark-bg-color);
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+    top: 1%; /* Pertahankan jika ingin sedikit jarak dari atas */
+    left: 1%; /* Ini memusatkan secara horizontal */
+    transform: translateX(0); /* Geser hanya secara horizontal */
+}
+
+.nav-content {
+    transition: 0.5s;
+}
+
+.by-nazril-container {
+    overflow: hidden;
+    transition: 0.5s;
+    width: 150px;
+    height: 25px;
+}
+
+.by-nazril {
+    margin-left: 10px;
+}
+
+nav div:nth-child(2) {
+    padding: 5px 10px;
+    font-size: 20px;
+    border: 1px solid rgba(185, 198, 214, 0.2); /* Menambahkan border semi-transparan */
+    border-radius: 25px;
+}
+
+nav div:nth-child(3) {
+    width: 0px;
+    height: 0px;
+    transition: 0.5s;
+    overflow: hidden;
+    margin: 0px 10px;
+}
+
+nav div:nth-child(3) a {
+    text-decoration: none;
+    color: var(--dark-bg-color);
+    margin-right: 10px;
+}
+
+nav div:nth-child(3) a:nth-child(3) {
+    margin-right: 0px;
+}
+
+/* HEADER */
+
+header {
+    z-index: 1;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+.title-container div h1 {
+    color: white;
+    font-size: 60px;
+    position: relative;
+    transform: translateY(500px);
+}
+
+.nazril {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.ramadhan {
+    display: flex;
+    align-items: center;
+}
+
+.header-img-container img {
+    position: absolute;
+    width: 2000px;
+    left: 50%;
+    transform: translate(-50%, -150px);
+}
+
+#header-img-main {
+    z-index: -4;
+    transform: translate(-50%, -130px);
+    animation: header-main ease-out 1.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.1s;
+}
+
+@keyframes header-main {
+    from {
+        transform: translate(-50%, -130px);
+    }
+    to {
+        transform: translate(-50%, -150px);
+    }
+}
+
+#header-img-1 {
+    z-index: -3;
+    transform: translate(-50.5%, -150px);
+    animation: header-1 ease-out 1.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.1s;
+}
+
+@keyframes header-1 {
+    from {
+        transform: translate(-50.5%, -150px);
+    }
+    to {
+        transform: translate(-50%, -150px);
+    }
+}
+
+#header-img-2 {
+    z-index: -2;
+    transform: translate(-49.5%, -150px);
+    animation: header-2 ease-out 1.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.1s;
+}
+
+@keyframes header-2 {
+    from {
+        transform: translate(-49.5%, -150px);
+    }
+    to {
+        transform: translate(-50%, -150px);
+    }
+}
+
+#header-img-3 {
+    z-index: -1;
+    transform: translate(-51%, -150px);
+    animation: header-3 ease-out 1.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.1s;
+}
+
+@keyframes header-3 {
+    from {
+        transform: translate(-51%, -150px);
+    }
+    to {
+        transform: translate(-50%, -150px);
+    }
+}
+
+#header-img-4 {
+    z-index: 1;
+    transform: translate(-49%, -150px);
+    animation: header-4 ease-out 1.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.1s;
+}
+
+@keyframes header-4 {
+    from {
+        transform: translate(-49%, -150px);
+    }
+    to {
+        transform: translate(-50%, -150px);
+    }
+}
+
+#header-img-5 {
+    z-index: 2;
+    position: relative;
+    margin-bottom: 0px;
+    transform: translate(-47%, -150px);
+    animation: header-4 ease-out 1.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.1s;
+}
+
+@keyframes header-4 {
+    from {
+        transform: translate(-47%, -150px);
+    }
+    to {
+        transform: translate(-50%, -150px);
+    }
+}
+
+/* MAIN */
+
+main {
+    background-color: var(--black-bg-color);
+    height: 5000px;
+    z-index: 2;
+    position: relative;
+    transform: translateY(-160px);
+    box-shadow: 0 -100px 150px var(--black-bg-color);
+}
+
+main h1 {
+    color: white;
+}
+
+.contact-container {
+    position: absolute;
+    transform: translate(25px, -100px);
+}
+
+.contact-container a {
+    text-decoration: none;
+    font-size: 15px;
+    color: var(--light-bg-color);
+    border-radius: 15px;
+    padding: 5px 15px;
+    transition: 0.3s;
+    animation: contact 1s ease-out;
+    animation-fill-mode: forwards;
+    margin-left: -15px;
+}
+
+@keyframes contact {
+    from {
+        margin-left: -15px;
+    }
+    to {
+        margin-left: 0px;
+    }
+}
+
+.contact-container a:hover {
+    background-color: var(--light-bg-color);
+    color: var(--dark-bg-color);
+}
+
+.link {
+    position: absolute;
+    padding: 5px 15px;
+    border-radius: 15px;
+    background-color: var(--light-bg-color);
+    color: var(--dark-bg-color);
+    transition: 0.5s; /* Transisi pada elemen .link */
+    z-index: 999;
+    transform: scale(0);
+    box-shadow: 0 0 15px var(--light-bg-color);
+    overflow: hidden;
+    width: 165px;
+    height: 18px;
+    pointer-events: none;
+}
+
+.link small {
+    position: absolute;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.link small:first-child {
+    transform: translateX(0px);
+}
+
+.link small:nth-child(2) {
+    transform: translateX(180px);
+}
+
+.link small:nth-child(3) {
+    transform: translateX(300px);
+}
+
+.slogan-1 {
+    color: var(--light-bg-color);
+    display: flex;
+    align-items: center;
+    flex: 4;
+}
+
+.slogan-container {
+    width: 80%;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+}
+
+.slogan-1 div {
+    margin-left: 10px;
+    overflow: hidden;
+}
+
+.slogan-1 div h1 {
+    color: var(--light-bg-color);
+    transition: 0.5s;
+    transform: translateY(50px);
+}
+
+.slogan-1 div:first-child {
+    margin-left: 0px;
+}
+
+.slogan-2 {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.slogan-2 div {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.slogan-2 div small {
+    height: 100%;
+    position: relative;
+    transition: 1s;
+}
+
+.slogan-2 div small b {
+    text-shadow: 0 0 5px rgba(185, 198, 214, 0.5)
+}
